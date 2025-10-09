@@ -12,7 +12,6 @@ import ViewProduct from "./Pages/ViewProduct";
 import Home from "./pages/Home";
 import Contact from "./Pages/Contact";
 import Wishlist from "./pages/Wishlist";
-import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 
 function App() {
