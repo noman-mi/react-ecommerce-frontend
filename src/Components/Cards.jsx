@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Buttons";
 import { useNavigate } from "react-router-dom";
+// import axios from axios
 
 function Cards() {
   const [products, setProducts] = useState([]);
