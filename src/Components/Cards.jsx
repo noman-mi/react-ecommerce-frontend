@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Buttons";
 import { useNavigate } from "react-router-dom";
-// import axios from axios
+import axios from "axios"
 
 function Cards() {
   const [products, setProducts] = useState([]);
@@ -9,9 +9,8 @@ function Cards() {
 
 useEffect(() => {
   const fetchProducts = async () => {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    setProducts(data);
+    const response = await axios.get("https://fakestoreapi.com/products");
+    setProducts(response.data);
   };
 
   fetchProducts();
