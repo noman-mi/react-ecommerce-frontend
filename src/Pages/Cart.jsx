@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
-import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
@@ -77,7 +77,7 @@ function Cart() {
         )}
       </div>
 
-      <Navbar />
+      <Footer />
     </div>
   );
 }

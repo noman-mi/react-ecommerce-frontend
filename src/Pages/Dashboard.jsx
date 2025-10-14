@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from "../Components/Header";
-import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
@@ -49,7 +49,7 @@ function Dashboard() {
             </div>
         </div>
     </main>
-    <Navbar/>
+    <Footer/>
     </div>
   )
 }

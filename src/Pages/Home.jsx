@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "../Components/Header";
 import Hero from "../Components/Hero";
-import Navbar from "../Components/Navbar";
 import Cards from "../Components/Cards";
+import Footer from "../Components/Footer";
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Header />
       <Hero />
       <Cards />
-      <Navbar />
+      <Footer/>
     </div>
   );
 }

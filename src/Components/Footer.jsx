@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+function Footer() {
   return (
     <>
 
@@ -63,4 +63,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Footer

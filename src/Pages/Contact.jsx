@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
-import Hero from "../Components/Hero";
-import Navbar from "../Components/Navbar";
-import Cards from "../Components/Cards";
+import Footer from "../Components/Footer";
 
 function Contact() {
   return (
@@ -25,7 +23,7 @@ function Contact() {
             <button className="border  rounded-[0.5rem] p-3 mt-[1.5rem] bg-blue-700 text-white font-medium">Send Message</button>
         </form>
     </main>
-    <Navbar/>
+    <Footer/>
     </div>
   );
 }

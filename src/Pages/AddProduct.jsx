@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../Components/Header";
-import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 function AddProduct() {
   const navigate = useNavigate();
@@ -157,7 +157,7 @@ function AddProduct() {
           </form>
         </div>
       </main>
-      <Navbar />
+      <Footer />
     </div>
   );
 }
