@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 function Checkout() {
   const [cartItems, setCartItems] = useState([]);
@@ -42,7 +44,9 @@ function Checkout() {
 };
 
   return (
-    <div className="bg-gray-50 min-h-screen py-10 px-4 md:px-10">
+    <>
+    <Header/>
+    <div className="bg-gray-50 py-10 px-4 md:px-10">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
         <div className="md:col-span-2 bg-white p-6 rounded-2xl shadow-sm">
           <h2 className="text-2xl font-semibold mb-6 border-b pb-2">
@@ -188,7 +192,10 @@ function Checkout() {
           )}
         </div>
       </div>
-    </div>
+    </div>    
+    <Footer/>
+    </>
+
   );
 }
 
