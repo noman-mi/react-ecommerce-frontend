@@ -57,7 +57,7 @@ const filteredProducts = products.filter((product) =>
           <img
             src={product.image}
             alt={product.title}
-            className="w-32 h-32 object-contain mb-4"
+            className="w-50 h-50 object-contain mb-4"
           />
           <h3 className="text-sm font-semibold text-gray-800 text-center mb-2">
             {product.title}

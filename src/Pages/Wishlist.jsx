@@ -37,7 +37,7 @@ function Wishlist() {
 
 
       <div className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Your Wishlist </h2>
+        <h2 className="text-2xl font-bold mb-4 text-center">Your Wishlist </h2>
 
         {wishlistItems.length === 0 ? (
           <p className="text-gray-600">Your wishlist is empty.</p>
@@ -51,7 +51,7 @@ function Wishlist() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-20 h-20 object-contain"
+                  className="w-30 h-30 object-contain"
                 />
                 <div>
                   <h3 className="font-semibold">{item.title}</h3>
@@ -62,13 +62,13 @@ function Wishlist() {
               <div className="flex flex-col items-end">
                 <button
                   onClick={() => handleMoveToCart(item)}
-                  className="bg-red-500 p-3 text-[0.8rem] font-bold text-white rounded-2xl"
+                  className="bg-red-500 w-[100px] h-[55px] p-3 text-[0.8rem] font-bold text-white rounded-2xl"
                 >
                   Move to Cart
                 </button>
                 <button
                   onClick={() => handleRemove(item.id)}
-                  className="bg-blue-500 p-3 text-[0.8rem] font-bold text-white rounded-2xl mt-2"
+                  className="bg-blue-500 w-[100px] h-[55px] p-3 text-[0.8rem] font-bold text-white rounded-2xl mt-2"
                 >
                   Remove
                 </button>
