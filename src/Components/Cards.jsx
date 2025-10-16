@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Buttons";
-import { useNavigate } from "react-router-dom";
 import axios from "axios"
 
-function Cards() {
+function Cards({searchTerm}) {
   const [products, setProducts] = useState([]);
-  const navigate = useNavigate();
 
 useEffect(() => {
   const fetchProducts = async () => {
@@ -29,7 +27,6 @@ useEffect(() => {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    navigate("/cart");
   };
 
 
@@ -40,15 +37,19 @@ useEffect(() => {
     if (!exists) {
       wishlist.push(product);
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
-      navigate("/wishlist");
     } else {
       alert("This item is already in your wishlist!");
     }
   };
 
+const filteredProducts = products.filter((product) =>
+  product.title.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
+
   return (
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <div
           key={product.id}
           className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center"
