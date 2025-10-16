@@ -112,11 +112,11 @@ function Header() {
 
         <div className="flex gap-3 items-center sm:gap-6">
           <Link to={"/cart"}>
-            <i className="fa-solid fa-bag-shopping text-[2rem] sm:text-[2.5rem] md:text-[2.2rem] opacity-70"></i>
+            <i className="fa-solid fa-cart-plus text-[2rem] sm:text-[2.5rem] md:text-[2.2rem] opacity-70"></i>
           </Link>
 
           <Link to={"/wishlist"}>
-            <i className="fa-solid fa-cart-plus text-[2rem] sm:text-[2.5rem] md:text-[2.2rem] opacity-70"></i>
+            <i className="fa-solid fa-bag-shopping text-[2rem] sm:text-[2.5rem] md:text-[2.2rem] opacity-70"></i>
           </Link>
 
           <div className="flex md:hidden cursor-pointer" onClick={openSidebar}>

@@ -2,7 +2,7 @@ import React from "react";
 
 function Button({ text, styling, onClick }) {
   return (
-    <button onClick={onClick} className={`rounded-lg ${styling}`}>
+    <button onClick={onClick} className={`${styling}`}>
       {text}
     </button>
   );

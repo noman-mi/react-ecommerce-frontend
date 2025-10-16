@@ -48,7 +48,7 @@ const filteredProducts = products.filter((product) =>
 
 
   return (
-    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {filteredProducts.map((product) => (
         <div
           key={product.id}
@@ -66,13 +66,13 @@ const filteredProducts = products.filter((product) =>
 
           <Button
             text="Add To Cart"
-            styling="mb-2 font-bold px-4 py-2 bg-red-500 text-white rounded-lg cursor-pointer"
+            styling="w-[150px] mb-2 px-4 py-2 bg-red-500 text-white cursor-pointer font-bold rounded-lg "
             onClick={() => addToCart(product)}
           />
 
           <Button
             text="Add To Wishlist"
-            styling="mb-2 font-bold px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer"
+            styling="w-[150px] mb-2 font-bold px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer"
             onClick={() => addToWishlist(product)}
           />
         </div>
