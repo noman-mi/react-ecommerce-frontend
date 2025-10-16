@@ -137,9 +137,9 @@ function AddProduct() {
                 className="border p-3 w-[90%] m-[auto] md:m-0"
               >
                 <option value="">Select Category</option>
-                <option value="Angoor">Angoor</option>
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
+                <option value="Angoor">Elctronic</option>
+                <option value="Apple">Clothing</option>
+                <option value="Banana">Food</option>
               </select>
               <input
                 type="file"

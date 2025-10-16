@@ -8,12 +8,21 @@ function Cards({searchTerm}) {
 useEffect(() => {
   const fetchProducts = async () => {
     const response = await axios.get("https://fakestoreapi.com/products");
-    setProducts(response.data);
+    setProducts((prev) => {
+      const merged = [...prev];
+      response.data.forEach((product) => {
+        if (!merged.find((p) => p.id === product.id)) {
+          merged.push(product);
+        }
+      });
+      return merged;
+    });
   };
 
   fetchProducts();
 
 }, []);
+
 
 
   const addToCart = (product) => {
@@ -46,6 +55,13 @@ const filteredProducts = products.filter((product) =>
   product.title.toLowerCase().includes(searchTerm.toLowerCase())
 );
 
+useEffect(() => {
+  const localProducts = JSON.parse(localStorage.getItem("products")) || [];
+
+  if (localProducts.length > 0) {
+    setProducts((prev) => [...prev, ...localProducts]);
+  }
+}, []);
 
   return (
     <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

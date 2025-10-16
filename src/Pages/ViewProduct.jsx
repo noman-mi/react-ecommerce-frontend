@@ -10,6 +10,30 @@ function ViewProduct() {
     setProducts(storedProducts);
   }, []);
 
+  const handleRemove = (title) => {
+    const updatedProducts =
+      JSON.parse(localStorage.getItem("products"))?.filter(
+        (item) => item.title !== title
+      ) || [];
+
+    localStorage.setItem("products", JSON.stringify(updatedProducts));
+    setProducts(updatedProducts);
+
+    const updatedCart =
+      JSON.parse(localStorage.getItem("cart"))?.filter(
+        (item) => item.title !== title
+      ) || [];
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+    const updatedWishlist =
+      JSON.parse(localStorage.getItem("wishlist"))?.filter(
+        (item) => item.title !== title
+      ) || [];
+    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+
+    alert("Product removed successfully!");
+  };
+
   return (
     <div>
       <Header />
@@ -27,6 +51,7 @@ function ViewProduct() {
                   <th className="p-3 border">Price</th>
                   <th className="p-3 border">Category</th>
                   <th className="p-3 border">Description</th>
+                  <th className="p-3 border text-center">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -42,7 +67,15 @@ function ViewProduct() {
                     <td className="p-3 border">{item.title}</td>
                     <td className="p-3 border">${item.price}</td>
                     <td className="p-3 border">{item.category}</td>
-                    <td className="p-3 border">{item.description}</td>
+                    <td className="p-3 border w-0">{item.description}</td>
+                    <td className="p-3 border text-center">
+                      <button
+                        onClick={() => handleRemove(item.title)}
+                        className="bg-red-500 text-white px-4 py-2 rounded-2xl "
+                      >
+                        Remove
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
