@@ -4,7 +4,6 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
 function AddProduct() {
-  const navigate = useNavigate();
 
   const [product, setProduct] = useState({
     title: "",
@@ -41,7 +40,6 @@ function AddProduct() {
     localStorage.setItem("products", JSON.stringify(updatedProducts));
 
     alert(" Product added successfully!");
-    navigate("/viewproduct"); 
   };
 
   return (
