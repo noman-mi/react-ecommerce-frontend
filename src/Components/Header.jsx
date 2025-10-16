@@ -1,71 +1,3 @@
-// import React from 'react';
-// import image from "../assets/logo.png";
-// import Button from './Buttons';
-// import { Link } from 'react-router-dom';
-// import { useNavigate } from "react-router-dom";
-
-// function Header() {
-//     const navigate = useNavigate();
-//   return (
-//     <>
-//       <header className="flex justify-between p-6 items-center md:p-5 lg:p-3 lg:pl-20 lg:pr-20">
-//         <Link to={'/'}>
-//           <div className="flex justify-center items-center gap-2">
-//             <img src={image} alt="" className="w-[2.5rem]" />
-//             <h1 className="hidden lg:flex lg:text-[2rem] font-medium">E-Commerce</h1>
-//           </div>
-//         </Link>
-
-//         <div className="hidden md:flex">
-//           <nav>
-//             <ul className="flex gap-8">
-//               <li>
-//                 <Link to={'/'} className="text-[1.4rem] font-light text-blue-700">Home</Link>
-//               </li>
-//               <li>
-//                 <Link to={'/about'} className="text-[1.4rem] font-light">About</Link>
-//               </li>
-//               <li>
-//                 <Link to={'/contact'} className="text-[1.4rem] font-light">Contact</Link>
-//               </li>
-//             </ul>
-//           </nav>
-//         </div>
-
-//         <div className="flex gap-3 items-center sm:gap-6">
-//           <Link to={'/cart'}>
-//             <i className="fa-solid fa-bag-shopping text-[2rem] sm:text-[2.5rem] md:text-[2.2rem] opacity-70"></i>
-//           </Link>
-
-//           <Link to={'/wishlist'}>
-//             <i className="fa-solid fa-cart-plus text-[2rem] sm:text-[2.5rem] md:text-[2.2rem] opacity-70"></i>
-//           </Link>
-
-//           {/* <button className="hidden">Admin Dashboard</button> */}
-
-//           <div className="flex md:hidden">
-//             <i className="fa-solid fa-bars text-[1.5rem]"></i>
-//           </div>
-
-//           <Button
-//             styling="hidden bg-blue-700 p-4 pl-5 pr-5 text-white font-medium rounded-[0.8rem] md:flex"
-//             text="Admin Dashboard"
-//             onClick={()=>{navigate('/signin')}}            
-//           />
-
-//         </div>
-//       </header>
-
-//       <hr className="opacity-15" />
-//     </>
-//   );
-// }
-
-// export default Header;
-
-
-
-
 import React, { useState } from "react";
 import image from "../assets/logo.png";
 import Button from "./Buttons";
@@ -92,17 +24,17 @@ function Header() {
           <nav>
             <ul className="flex gap-8">
               <li>
-                <Link to={"/"} className="text-[1.4rem] font-light text-blue-700">
+                <Link to={"/"} className="text-[1.4rem] font-light hover:text-blue-700">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to={"/about"} className="text-[1.4rem] font-light">
+                <Link to={"/about"} className="text-[1.4rem] font-light hover:text-blue-700">
                   About
                 </Link>
               </li>
               <li>
-                <Link to={"/contact"} className="text-[1.4rem] font-light">
+                <Link to={"/contact"} className="text-[1.4rem] font-light hover:text-blue-700">
                   Contact
                 </Link>
               </li>

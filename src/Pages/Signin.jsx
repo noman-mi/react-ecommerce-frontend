@@ -13,10 +13,7 @@ function Signin() {
   const handleLogin = () => {
     if (email === AdminEmail && password === AdminPassword) {
       localStorage.setItem("isLoggedIn", "true");
-      alert("Login successful!");
       navigate("/dashboard");
-    } else {
-      alert("Invalid email or password!");
     }
   };
 

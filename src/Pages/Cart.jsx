@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
+  const navigate = useNavigate()
   const [cartItems, setCartItems] = useState([]);
-
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedCart);
@@ -114,7 +115,7 @@ function Cart() {
             </div>
 
             <div className="flex justify-end mt-4">
-              <button className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
+              <button onClick={()=>{navigate('/checkout')}} className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">
                 Checkout
               </button>
             </div>
