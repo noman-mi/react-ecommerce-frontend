@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function About() {
+    const navigate = useNavigate()
   return (
     <div>
     <Header/>
@@ -59,7 +61,7 @@ function About() {
             <div className="flex flex-col p-6 justify-center items-center pt-10">
                 <h1 className="text-center text-2xl font-medium">Start Shopping now !</h1>
                 <p className="text-center text-[1.2rem] pt-5">Explore our wide range of products and enjoy an amazing shopping experience.</p>
-                <button className="rounded-[0.7rem] bg-blue-700 text-white font-medium w-fit p-3 mt-6">Browse Products</button>
+                <button onClick={()=>{navigate('/')}} className="rounded-[0.7rem] bg-blue-700 text-white font-medium w-fit p-3 mt-6">Browse Products</button>
             </div>
 
         </section>

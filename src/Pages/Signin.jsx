@@ -14,6 +14,8 @@ function Signin() {
     if (email === AdminEmail && password === AdminPassword) {
       localStorage.setItem("isLoggedIn", "true");
       navigate("/dashboard");
+    }else{
+      alert('Enter correct email and password')
     }
   };
 
