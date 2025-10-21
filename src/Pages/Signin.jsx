@@ -10,9 +10,12 @@ function Signin() {
   const AdminEmail = "admin@example.com";
   const AdminPassword = "12345";
 
+
   const handleLogin = () => {
     if (email === AdminEmail && password === AdminPassword) {
       localStorage.setItem("isLoggedIn", "true");
+          const d = JSON.parse(localStorage.getItem('isLoggedIn'));
+    console.log(d)
       navigate("/dashboard");
     }else{
       alert('Enter correct email and password')
@@ -22,7 +25,7 @@ function Signin() {
   return (
 
     <div>
-<main className="h-195 bg-[#cfd3db] p-2 sm:p-10 flex justify-center items-center">
+<main className="h-dvh bg-[#cfd3db] p-2 sm:p-10 flex justify-center items-center">
       <div className="w-[90%] p-8 rounded-[0.7rem] flex flex-col bg-white shadow-[0_2px_10px_rgb(0,0,0,0.2)] mt-[3rem] sm:w-130 lg:w-115">
         <h1 className="text-[2rem] font-bold text-blue-700 text-center">
           Sign In

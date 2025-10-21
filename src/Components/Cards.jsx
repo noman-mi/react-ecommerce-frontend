@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Button from "./Buttons";
 import axios from "axios"
+ import { toast } from 'react-toastify';
 
 function Cards({searchTerm}) {
+      const notify = () => toast("Wow so easy!");
   const [products, setProducts] = useState([]);
 
 useEffect(() => {
@@ -34,8 +36,8 @@ useEffect(() => {
     } else {
       cart.push({ ...product, quantity: 1 });
     }
-
     localStorage.setItem("cart", JSON.stringify(cart));
+     toast.success("Item added to cart!");
   };
 
 
@@ -47,7 +49,7 @@ useEffect(() => {
       wishlist.push(product);
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
     } else {
-      alert("This item is already in your wishlist!");
+             toast.warn("Item already in cart"); 
     }
   };
 

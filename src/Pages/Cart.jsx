@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { useNavigate } from "react-router-dom";
 
+
 function Cart() {
   const navigate = useNavigate()
   const [cartItems, setCartItems] = useState([]);
@@ -52,7 +53,7 @@ function Cart() {
         <h2 className="text-2xl font-bold mb-4 text-center">Your Cart</h2>
 
         {cartItems.length === 0 ? (
-          <p className="text-gray-600 text-center h-60">Your cart is empty.</p>
+          <p className="text-gray-600 text-center h-85">Your cart is empty.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full border-collapse border border-gray-200 rounded-lg shadow-sm">

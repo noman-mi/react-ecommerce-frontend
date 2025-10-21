@@ -58,7 +58,15 @@ function Header() {
           <Button
             styling="hidden bg-blue-700 p-4 pl-5 pr-5 text-white font-medium rounded-[0.8rem] md:flex"
             text="Admin Dashboard"
-            onClick={() => navigate("/signin")}
+            onClick={() => {
+                  closeSidebar();
+                  const d = JSON.parse(localStorage.getItem('isLoggedIn'))
+                  if(d){
+                    navigate('/dashboard')
+                  }else{
+                  navigate("/signin");
+                }
+                }}
           />
         </div>
       </header>
@@ -103,7 +111,12 @@ function Header() {
                 text="Admin Dashboard"
                 onClick={() => {
                   closeSidebar();
+                  const d = JSON.parse(localStorage.getItem('isLoggedIn'))
+                  if(d){
+                    navigate('/dashboard')
+                  }else{
                   navigate("/signin");
+                }
                 }}
               />
             </nav>
