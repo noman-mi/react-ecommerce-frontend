@@ -4,7 +4,6 @@ import axios from "axios"
  import { toast } from 'react-toastify';
 
 function Cards({searchTerm}) {
-      const notify = () => toast("Wow so easy!");
   const [products, setProducts] = useState([]);
 
 useEffect(() => {

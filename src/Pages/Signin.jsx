@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../Components/Buttons"; 
+ import { toast } from 'react-toastify';
+
 
 function Signin() {
   const [email, setEmail] = useState("");
@@ -18,7 +20,8 @@ function Signin() {
     console.log(d)
       navigate("/dashboard");
     }else{
-      alert('Enter correct email and password')
+             toast.warn("Incorrect email or Password"); 
+
     }
   };
 
