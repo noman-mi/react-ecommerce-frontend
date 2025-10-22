@@ -32,7 +32,7 @@ function Dashboard() {
                 <div className="flex items-center p-3 gap-3 pl-5">
                     <i className="fa-solid fa-arrow-right-from-bracket text-[1.5rem]"></i>
 
-                    <button onClick={()=>{navigate('/')}} className="text-[1rem]">Logout</button>
+                    <button onClick={()=>{navigate('/')}} className="text-[1rem] cursor-pointer">Logout</button>
                 </div>
             </div>
 
