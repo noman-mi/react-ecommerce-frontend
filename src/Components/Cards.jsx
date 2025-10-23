@@ -48,7 +48,7 @@ useEffect(() => {
       wishlist.push(product);
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
     } else {
-             toast.warn("Item already in cart"); 
+             toast.warn("Item already in wishlist"); 
     }
   };
 
