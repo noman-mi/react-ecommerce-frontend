@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
-import About from "./pages/About";
+import About from "./Pages/About";
 import Contact from './Pages/Contact';
 import Cart from "./Pages/Cart";
-import Wishlist from "./pages/Wishlist";
+import Wishlist from "./Pages/Wishlist";
 import Dashboard from "./Pages/Dashboard";
 import Signin from "./Pages/Signin";
 import AddProduct from "./Pages/AddProduct";
